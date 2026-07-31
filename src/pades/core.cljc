@@ -82,8 +82,16 @@
     #?(:clj (String. (byte-array (map unchecked-byte ints)) "ISO-8859-1")
        :cljs (apply str (map js/String.fromCharCode ints)))))
 
-(defn- text-> [^String s]
-  (mapv #(bit-and (int %) 0xff) s))
+(defn- text->
+  "Latin-1 text back to bytes.
+
+  `.charCodeAt` on `:cljs` and not `int`. A String iterates as Characters on the
+  JVM and as one-character STRINGS on ClojureScript, where `int` parses them as
+  numbers — so `\"%\"` became 0 and `\"4\"` became 4, and every PDF this produced
+  on cljs was mostly zeros. The same mistake `pdf.core/write-document` had; found
+  in both by running a portable job for the first time."
+  [s]
+  (mapv (fn [c] (bit-and #?(:clj (int c) :cljs (.charCodeAt c 0)) 0xff)) s))
 
 (defn- last-startxref [text]
   (let [i (str/last-index-of text "startxref")]

@@ -1,7 +1,7 @@
 {:paths ["src"]
  :deps {io.github.kotoba-lang/org-ietf-asn1
         {:git/url "https://github.com/kotoba-lang/org-ietf-asn1.git"
-         :git/sha "3704c75db3da21e1f1153cb7907411f0b7d9fa28"}
+         :git/sha "bac36f402cf6c1b6a6c4eb1cf0ec69d2258fb19c"}
         io.github.kotoba-lang/org-ietf-x509
         {:git/url "https://github.com/kotoba-lang/org-ietf-x509.git"
          :git/sha "9cbe0756319e558007fb3c1bbf7a15968b07dcd2"}
@@ -13,7 +13,7 @@
          :git/sha "0b629e23f91feb4628c34011461ce730c4204e90"}
         io.github.kotoba-lang/org-iso-pdf
         {:git/url "https://github.com/kotoba-lang/org-iso-pdf.git"
-         :git/sha "206252854da13e6d2a9aa1749cb4fad5f5bd79f0"}}
+         :git/sha "a5031d34f4c0c5ef8a68aa75c0b64ce830a9089d"}}
  :aliases
  {:test {:extra-paths ["test"]
          :extra-deps {io.github.cognitect-labs/test-runner

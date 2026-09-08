@@ -7,7 +7,7 @@
   against the range the same code computed. So the range is checked against the
   FILE: every byte is either signed or inside the placeholder, and nothing is
   both or neither."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [asn1.core :as asn1]
             [asn1.oid :as oid]

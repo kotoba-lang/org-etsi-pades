@@ -52,7 +52,7 @@
   document timestamps. `profile` reports which one a produced file is, so that
   nothing downstream claims a level it did not build."
   (:require [asn1.core :as asn1]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [pdf.core :as pdf]))
 
 (defn fail! [code message data]

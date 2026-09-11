@@ -65,8 +65,8 @@ truncated signature is a file that looks signed and verifies nowhere.
 ## Test
 
 ```bash
-clojure -M:test
-clojure -M:lint
+kbb -M:test
+kbb -M:lint
 ```
 
 Apache-2.0.

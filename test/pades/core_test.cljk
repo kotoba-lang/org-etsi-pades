@@ -8,7 +8,7 @@
   FILE: every byte is either signed or inside the placeholder, and nothing is
   both or neither."
   (:require [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [asn1.core :as asn1]
             [asn1.oid :as oid]
             [cms.core :as cms]
